@@ -1,0 +1,11 @@
+*
+!.gitignore
+!.vimrc
+!.zshrc
+!.shrc
+!.lynxrc
+!.Xdefaults
+!.xinitrc
+!.xsession
+!.tmux.conf
+!bin
