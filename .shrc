@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export TZ=Asia/Tokyo
+export PATH=$HOME/bin:$PATH
+
+PS1='\u@\h \W\$ '
