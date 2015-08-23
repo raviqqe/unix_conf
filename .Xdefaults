@@ -8,11 +8,11 @@ urxvt*pointerBlank: true
 urxvt*font: xft:terminus:pixelsize=12,antialias=false
 urxvt*italicFont: xft:terminus:pixelsize=12,antialias=false
 urxvt*boldFont: xft:terminus:bold:pixelsize=12,antialias=false
-#urxvt*boldItalicFont: xft:terminus:bold:pixelsize=12,antialias=false
+!urxvt*boldItalicFont: xft:terminus:bold:pixelsize=12,antialias=false
 !urxvt*pointerBlankDelay: 0
-#urxvt*color1: magenta
-#urxvt*color2: green
-#urxvt*color3: yellow
-#urxvt*color4: cyan
-# color of ls command
-#urxvt*color12: cyan
+!urxvt*color1: magenta
+!urxvt*color2: green
+!urxvt*color3: yellow
+!urxvt*color4: cyan
+! color of ls command
+!urxvt*color12: cyan
