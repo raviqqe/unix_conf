@@ -12,8 +12,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 
 # options
-setopt appendhistory autocd extendedglob nomatch
-unsetopt beep notify
+setopt appendhistory autocd extendedglob
+unsetopt beep notify nomatch
 
 # key binds
 bindkey -e
