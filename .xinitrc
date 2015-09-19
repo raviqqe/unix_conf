@@ -1,32 +1,42 @@
 #!/bin/sh
+#
+# .xinitrc
 
-if [ -d /etc/X11/xinit/xinitrc.d ]; then
-  for f in /etc/X11/xinit/xinitrc.d/*; do
-    [ -x "$f" ] && . "$f"
-  done
-  unset f
-fi
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=ibus
+/usr/local/bin/mozc start
+ibus-daemon -r --daemonize --xim
 
-# input method
-export GTK_IM_MODULE=uim
-export QT_IM_MODULE=uim
-uim-xim &
-export XMODIFIERS=@im=uim
+#vidcontrol -S off
+xset b off
 
 while :
 do
-  sleep 1800
-  feh -rz --bg-fill $HOME/pic &
+  xsetroot -name "`
+      whoami
+    `@`
+      hostname -s
+    ` | `
+      uptime | grep -o 'load.*'
+    ` | battery: `
+      acpiconf -i 0 | grep 'Remaining capacity:' \
+      | grep -o '[^[:blank:]]*$'
+    ``
+      if [ -z $(acpiconf -i 0 | grep 'State:' | grep -o discharging) ]
+      then
+        echo ', charging'
+      fi
+    ` | `
+      TZ=Asia/Tokyo date | sed 's/  */ /g'
+    `"
+  sleep 0.3
 done &
 
-usr=`whoami`
-host=`hostname | sed 's/\..*$//'`
 while :
 do
-  rwinname="$usr@$host | $(uptime | sed 's/^ *[^ ]* *//') | battery: $(
-      acpi | cut -d ',' -f 2) | $(TZ=Asia/Tokyo date)"
-  xsetroot -name "`echo "$rwinname" | sed 's/  */ /g'`"
-  sleep 0.3
+  feh -zr --bg-fill $HOME/pic
+  sleep 1800 # xdm sets up the first wallpaper when you log in
 done &
 
 urxvt &
