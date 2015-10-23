@@ -26,9 +26,3 @@ alias ls='ls --color=auto'
 PROMPT='%n@%m %~ %(?..[%?] )%# '
 PROMPT2='%_> '
 RPROMPT=' %W %T' # doesn't work well...
-
-# environment valiables
-export LOCAL=$HOME/local
-export PATH=$HOME/bin:$LOCAL/bin:$PATH
-export LIBRARY_PATH=$LOCAL/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=$LOCAL/lib:$LD_LIBRARY_PATH
