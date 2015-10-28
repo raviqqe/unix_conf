@@ -23,6 +23,11 @@ export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH
 export LIBRARY_PATH=$LOCAL/lib64:$LOCAL/lib:$LOCAL/usr/lib64:$LOCAL/usr/lib
 export LIBRARY_PATH=$LOCAL/usr/local/lib64:$LOCAL/usr/local/lib:$LIBRARY_PATH
 export LIBRARY_PATH=/coin/home/makoto.miwa/.lib_srv7/lib:$LIBRARY_PATH
+
+## cuda
+export PATH=$PATH:/usr/local/cuda/bin
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/cuda/lib64
+
 export LD_LIBRARY_PATH=$LIBRARY_PATH
 export TERM=xterm
 #export DESTDIR=$LOCAL
