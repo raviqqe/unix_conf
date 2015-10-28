@@ -4,7 +4,7 @@ After=local-fs.target
 
 [Service]
 Type=oneshot
-ExecStart=/home/raviqqe/tmphome.sh
+ExecStart=/home/raviqqe/bin/tmphome.sh
 RemainAfterExit=yes
 
 [Install]
