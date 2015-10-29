@@ -20,7 +20,7 @@ bindkey -e
 bindkey "^[[3~" delete-char
 
 # aliases
-alias ls='ls --color=auto'
+alias ls='ls -F'
 
 # prompt
 PROMPT='%n@%m %~ %(?..[%?] )%# '
