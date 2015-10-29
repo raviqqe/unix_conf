@@ -6,7 +6,7 @@ urxvt*transparent: true
 urxvt*shading: 16
 urxvt*scrollBar: false
 urxvt*pointerBlank: true
-urxvt*pointerBlankDelay: 0
+urxvt*pointerBlankDelay: 1
 urxvt*font: xft:Terminus:pixelsize=12,antialias=false,xft:IPAGothic:size=12:antialias=false
 urxvt*italicFont: xft:Terminus:pixelsize=12,antialias=false
 urxvt*boldFont: xft:Terminus:bold:pixelsize=12,antialias=false
