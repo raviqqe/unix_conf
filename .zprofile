@@ -12,6 +12,7 @@ LOCAL=$HOME/local
 
 export LC_ALL=en_US.UTF-8
 export PATH=$HOME/bin:$LOCAL/bin:$LOCAL/usr/bin:$LOCAL/usr/local/bin:$PATH
+export MANPATH=/usr/share/man:/usr/local/man:$MANPATH
 export MANPATH=$LOCAL/usr/man:$LOCAL/usr/local/man:$MANPATH
 export MANPATH=$LOCAL/usr/local/share/man:$MANPATH
 export CC=clang
